@@ -16,7 +16,7 @@ import api from "../../api/client";
 import { SupervisorDashboardMetrics, Insights, Violation, Worker } from "../../types";
 import { PageHeader, StatCard, Card, StatusBadge, SeverityBadge } from "../../components/ui";
 import { WorkersTable } from "../../components/WorkersTable";
-import { DonutChart } from "../../components/charts/DonutChart";
+import { DonutChart } from "../../components/charts/Donutchart";
 import { StatCardSkeletonRow, ChartSkeleton } from "../../components/Loading";
 
 export const SupervisorDashboard = () => {

@@ -11,7 +11,7 @@ import {
 import api from "../../api/client";
 import { Violation, Worker, InsightBucket } from "../../types";
 import { PageHeader, Card, StatCard, StatusBadge, SeverityBadge } from "../../components/ui";
-import { DonutChart } from "../../components/charts/DonutChart";
+import { DonutChart } from "../../components/charts/Donutchart";
 import { DotLoader, TableSkeleton } from "../../components/Loading";
 import { generateViolationsPdf } from "../../utils/pdfReport";
 import { AlertTriangle, CheckCircle2, ShieldAlert, ListChecks } from "lucide-react";

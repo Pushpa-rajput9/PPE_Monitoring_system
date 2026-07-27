@@ -17,7 +17,7 @@ import api from "../../api/client";
 import { Insights } from "../../types";
 import { PageHeader, Card } from "../../components/ui";
 import { ChartSkeleton } from "../../components/Loading";
-import { DonutChart } from "../../components/charts/DonutChart";
+import { DonutChart } from "../../components/charts/Donutchart";
 
 const COLORS = ["#f2a900", "#0b1220", "#d7263d", "#1f9d55", "#2563eb", "#0891b2", "#7c3aed", "#c98600"];
 
