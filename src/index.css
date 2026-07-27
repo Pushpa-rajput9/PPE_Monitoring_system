@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #0b1220;
+  --color-slate-900: #101827;
+  --color-slate-800: #1b2436;
+  --color-slate-700: #2a3651;
+  --color-slate-500: #64748b;
+  --color-slate-200: #e2e8f0;
+  --color-paper: #f5f6f8;
+  --color-amber: #f2a900;
+  --color-amber-dark: #c98600;
+  --color-safety-red: #d7263d;
+  --color-safety-green: #1f9d55;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+.hazard-stripe {
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--color-amber) 0px,
+    var(--color-amber) 10px,
+    var(--color-ink) 10px,
+    var(--color-ink) 20px
+  );
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-ink);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-slate-500); border-radius: 4px; }
+@keyframes sg-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes sg-spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+@keyframes sg-pulse-scale {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.85); opacity: 0.6; }
+}
+@keyframes sg-shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+@keyframes sg-dot-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.5; }
+  40% { transform: translateY(-4px); opacity: 1; }
+}
+
+.sg-skeleton {
+  background: linear-gradient(90deg, #eef1f5 25%, #f7f8fa 37%, #eef1f5 63%);
+  background-size: 400px 100%;
+  animation: sg-shimmer 1.4s ease-in-out infinite;
+}
+.recharts-wrapper svg {
+  overflow: visible;
+}
+
+@keyframes sg-toast-in {
+  from { transform: translateY(-16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes sg-toast-shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+.sg-toast {
+  animation: sg-toast-in 0.25s ease-out;
+}
+.sg-toast-bar {
+  animation: sg-toast-shrink 6s linear forwards;
+}
+.sg-toast-pulse {
+  animation: sg-pulse-scale 1.4s ease-in-out infinite;
+}
