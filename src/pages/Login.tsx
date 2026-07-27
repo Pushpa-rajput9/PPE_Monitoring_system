@@ -79,7 +79,7 @@ export const Login = () => {
             )}
           </button>
 
-          <div className="pt-3 border-t border-slate-100 text-[11px] text-slate-400 leading-relaxed">
+          <div className="pt-3 border-t border-slate-100 text-[11px] text-slate-600 leading-relaxed">
             Demo accounts (after seeding):<br />
             Admin: admin@ppesite.com / Admin@12345<br />
             Supervisor: supervisor@ppesite.com / Supervisor@12345
